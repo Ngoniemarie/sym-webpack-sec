@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+	<div class="container mt-5  ">
+
+		<div class="row">
+			<div class="col-12 col-md-8 col-lg-6 mx-auto">
+				{{ form_start(form) }}
+				{{ form_row(form.firstname, {'attr': {'placeholder': "contenue du prénom"}})}}
+                {{ form_row(form.lastname,{'attr': {'placeholder': "contenue du nom"}})}}
+				{{ form_row(form.photo, {'attr': {'placeholder': "contenue du photo"}})}}
+				{{ form_row(form.password, {'attr': {'placeholder': "contenue du mot de passe"}})}}
+				{{ form_row(form.email, {'attr': {'placeholder': "contenue de l'email"}})}}
+                {{ form_row(form.age, {'attr': {'placeholder': "contenue de l'age"}})}}
+                {{ form_row(form.address, {'attr': {'placeholder': "contenue de l'adresse"}})}}
+
+
+
+				{{ form_widget(form) }}
+
+				<button type="submit" class="center-btn btn-success" value="Submit">Sauvegarder</button>
+
+			</div>
+		</div>
+
+
+		{{ form_end(form) }}
+
+
+	</div>
+
+
+{% endblock %}
